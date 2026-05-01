@@ -1,0 +1,72 @@
+{
+  "settings": {
+    "geometry_xyz": "as_tt_water_experiments/data/as_tt_water/water.xyz",
+    "water_coordinate_unit": "Bohr",
+    "water_as_dim": 4,
+    "water_as_sigma2": 0.1,
+    "water_as_samples": 256,
+    "cheb_interval": [
+      -0.3,
+      0.3
+    ],
+    "n_points": 7,
+    "total_tensor_points": 2401,
+    "run_mode": "single_budget",
+    "sampling_policy": "fraction",
+    "single_budget_resolved": 481,
+    "sweep_budgets_resolved": [
+      121,
+      241,
+      481,
+      961
+    ],
+    "baselines": [
+      "my_cheb",
+      "authors_budgeted"
+    ],
+    "trace_source": "npz",
+    "trace_status": "budget_exhausted",
+    "trace_unique_queries": 481,
+    "trace_total_queries": 482
+  },
+  "rows": [
+    {
+      "mode": "single_budget",
+      "budget": 481,
+      "baseline": "my_cheb",
+      "status": "ok",
+      "observed_points": 481,
+      "train_points": 433,
+      "val_points": 48,
+      "eval_points": 4,
+      "rank_label": "2",
+      "train_rmse_mev": 1144.4003956139063,
+      "completion_hidden_rmse_mev": null,
+      "grid_hidden_rmse_mev": null,
+      "offgrid_rmse_mev": 3879.3865841294755,
+      "offgrid_max_abs_mev": 7533.4629713765435,
+      "elapsed_sec": 0.08971428871154785,
+      "note": null,
+      "error": null
+    },
+    {
+      "mode": "single_budget",
+      "budget": 481,
+      "baseline": "authors_budgeted",
+      "status": "budget_exhausted_before_convergence",
+      "observed_points": 481,
+      "train_points": 481,
+      "val_points": 0,
+      "eval_points": 0,
+      "rank_label": "online",
+      "train_rmse_mev": null,
+      "completion_hidden_rmse_mev": null,
+      "grid_hidden_rmse_mev": null,
+      "offgrid_rmse_mev": null,
+      "offgrid_max_abs_mev": null,
+      "elapsed_sec": 0.0,
+      "note": "The authors online sampler was run under the common budget and did not converge by this prefix, so no faithful authors surrogate exists yet.",
+      "error": null
+    }
+  ]
+}

@@ -1,0 +1,267 @@
+{
+  "settings": {
+    "run_tag": "smoke_results_check",
+    "n_points": 7,
+    "tensor_dim": 4,
+    "tol": 1e-05,
+    "tt_backend": "ttml",
+    "ttml_env_name": "matrix_approximation_final_3_11",
+    "water_as_samples": 256,
+    "fixed_mask_baselines": [
+      "tt_als_smoke"
+    ],
+    "total_tensor_points": 2401,
+    "authors_budget_mode": "fraction_of_tensor",
+    "authors_budget_resolved": 1201,
+    "completion_prefix_budget_mode": "absolute",
+    "completion_prefix_budget_resolved": 512,
+    "budget_sweep_mode": "absolute",
+    "budget_sweep_resolved": [
+      8
+    ],
+    "evaluation_random_test_points": 4,
+    "evaluation_exact_grid_metrics": false,
+    "selected_model_runs": [
+      "tt_als_smoke",
+      "authors_faithful_ttml_smoke"
+    ],
+    "model_runs": [
+      {
+        "enabled": true,
+        "name": "tt_als_smoke",
+        "runner": "fixed_mask_baseline",
+        "model": "tt_als",
+        "params": {
+          "rank": 2,
+          "max_iter": 2,
+          "tol": 0.001,
+          "verbose": false
+        }
+      },
+      {
+        "enabled": true,
+        "name": "authors_faithful_ttml_smoke",
+        "runner": "authors_baseline",
+        "params": {}
+      }
+    ],
+    "outputs_dir": "/Users/maximsnytsarev/PycharmProjects/tensor_completion2/baranov2015_as_tt_experiments/results/faithful_control_panel"
+  },
+  "authors_baseline": {
+    "model_name": "authors_faithful_ttml_smoke",
+    "params": {},
+    "backend_requested": "ttml",
+    "backend_used": "ttml_dmrg",
+    "faithful_backend": false,
+    "unique_queries": 2401,
+    "total_queries": 7154,
+    "rms_random_mev": 0.005411443507302078,
+    "tt_ranks": [
+      1,
+      7,
+      12,
+      7,
+      1
+    ],
+    "storage": 1274,
+    "test_metrics": {
+      "rmse_mev": 0.005411443507302078,
+      "max_abs_mev": 0.01638520269898344,
+      "chebyshev_error_mev": 0.01638520269898344,
+      "n_test": 1000.0
+    },
+    "info": {
+      "backend_note": "TTML_EXTERNAL_BACKEND",
+      "ttml_method": "dmrg",
+      "ttml_env_name": "matrix_approximation_final_3_11",
+      "ttml_path": "/Users/maximsnytsarev/anaconda3/envs/matrix_approximation_final_3_11/lib/python3.11/site-packages/ttml/tt_cross.py",
+      "ttml_site_packages": null,
+      "value_tt_ranks": [
+        1,
+        7,
+        12,
+        7,
+        1
+      ],
+      "storage": 1274,
+      "errors": []
+    },
+    "elapsed_sec": 82.22479295730591
+  },
+  "authors_baselines": {
+    "authors_faithful_ttml_smoke": {
+      "model_name": "authors_faithful_ttml_smoke",
+      "params": {},
+      "backend_requested": "ttml",
+      "backend_used": "ttml_dmrg",
+      "faithful_backend": false,
+      "unique_queries": 2401,
+      "total_queries": 7154,
+      "rms_random_mev": 0.005411443507302078,
+      "tt_ranks": [
+        1,
+        7,
+        12,
+        7,
+        1
+      ],
+      "storage": 1274,
+      "test_metrics": {
+        "rmse_mev": 0.005411443507302078,
+        "max_abs_mev": 0.01638520269898344,
+        "chebyshev_error_mev": 0.01638520269898344,
+        "n_test": 1000.0
+      },
+      "info": {
+        "backend_note": "TTML_EXTERNAL_BACKEND",
+        "ttml_method": "dmrg",
+        "ttml_env_name": "matrix_approximation_final_3_11",
+        "ttml_path": "/Users/maximsnytsarev/anaconda3/envs/matrix_approximation_final_3_11/lib/python3.11/site-packages/ttml/tt_cross.py",
+        "ttml_site_packages": null,
+        "value_tt_ranks": [
+          1,
+          7,
+          12,
+          7,
+          1
+        ],
+        "storage": 1274,
+        "errors": []
+      },
+      "elapsed_sec": 82.22479295730591
+    }
+  },
+  "rows": [
+    {
+      "budget": 8,
+      "variant": "tt_als_smoke",
+      "train_rmse": 0.0,
+      "train_mae": 0.0,
+      "train_max_abs": 0.0,
+      "test_rmse_mev": 1119.9890450542835,
+      "test_max_abs_mev": 1303.7109663051492,
+      "completion_hidden_rmse_mev": null,
+      "completion_hidden_mae_mev": null,
+      "completion_hidden_max_abs_mev": null,
+      "completion_hidden_relative_rmse": null,
+      "completion_hidden_mape": null,
+      "completion_full_rmse_mev": null,
+      "completion_full_mae_mev": null,
+      "completion_full_max_abs_mev": null,
+      "completion_full_relative_rmse": null,
+      "completion_full_mape": null,
+      "grid_hidden_rmse_mev": null,
+      "grid_hidden_max_abs_mev": null,
+      "grid_full_rmse_mev": null,
+      "grid_full_max_abs_mev": null,
+      "grid_roundtrip_rmse": 2.999262751020203e-14,
+      "grid_roundtrip_max_abs": 9.947598300641403e-14,
+      "elapsed_sec": 0.01582193374633789,
+      "history_len": null,
+      "completed_min_hartree": -75.96874434182415,
+      "completed_max_hartree": -75.95795874362308,
+      "info": {
+        "history": [
+          0.005114334871639439,
+          0.004052631800897139
+        ],
+        "objective_history": [
+          844.3603710325262,
+          591.7689446670654
+        ],
+        "tt_ranks": [
+          2,
+          2,
+          2
+        ],
+        "completion_value_mode": "relative_mev_observed_min",
+        "reference_energy_hartree": -75.96874434182415,
+        "model": "tt_als",
+        "params": {
+          "rank": 2,
+          "max_iter": 2,
+          "tol": 0.001,
+          "verbose": false
+        }
+      },
+      "baseline_family": "fixed_mask:tt_als",
+      "phase": "budget_sweep",
+      "runner": "fixed_mask_baseline",
+      "model": "tt_als",
+      "params": {
+        "rank": 2,
+        "max_iter": 2,
+        "tol": 0.001,
+        "verbose": false
+      },
+      "status": "ok",
+      "observed_points": 8,
+      "train_points": 8,
+      "val_points": 0,
+      "eval_points": 4,
+      "requested_rank": 2,
+      "effective_rank": 2,
+      "rank_label": "2"
+    },
+    {
+      "budget": 8,
+      "variant": "authors_faithful_ttml_smoke",
+      "train_rmse": null,
+      "train_mae": null,
+      "train_max_abs": null,
+      "test_rmse_mev": null,
+      "test_max_abs_mev": null,
+      "completion_hidden_rmse_mev": null,
+      "completion_hidden_mae_mev": null,
+      "completion_hidden_max_abs_mev": null,
+      "completion_hidden_relative_rmse": null,
+      "completion_hidden_mape": null,
+      "grid_hidden_rmse_mev": null,
+      "grid_hidden_max_abs_mev": null,
+      "grid_full_rmse_mev": null,
+      "grid_full_max_abs_mev": null,
+      "grid_roundtrip_rmse": null,
+      "grid_roundtrip_max_abs": null,
+      "elapsed_sec": 82.22479295730591,
+      "history_len": null,
+      "completed_min_hartree": null,
+      "completed_max_hartree": null,
+      "info": {
+        "backend_note": "TTML_EXTERNAL_BACKEND",
+        "ttml_method": "dmrg",
+        "ttml_env_name": "matrix_approximation_final_3_11",
+        "ttml_path": "/Users/maximsnytsarev/anaconda3/envs/matrix_approximation_final_3_11/lib/python3.11/site-packages/ttml/tt_cross.py",
+        "ttml_site_packages": null,
+        "value_tt_ranks": [
+          1,
+          7,
+          12,
+          7,
+          1
+        ],
+        "storage": 1274,
+        "errors": [],
+        "required_unique_queries": 2401,
+        "total_queries": 7154,
+        "rms_random_mev": 0.005411443507302078
+      },
+      "baseline_family": "authors_baseline",
+      "phase": "budget_sweep",
+      "runner": "authors_baseline",
+      "model": "authors_baseline",
+      "status": "not_ready",
+      "observed_points": 2401,
+      "train_points": 2401,
+      "val_points": 0,
+      "eval_points": 4,
+      "requested_rank": null,
+      "effective_rank": null,
+      "rank_label": "1x7x12x7x1",
+      "params": {},
+      "authors_required_unique_queries": 2401,
+      "authors_total_queries": 7154,
+      "authors_storage": 1274,
+      "authors_rms_random_mev": 0.005411443507302078
+    }
+  ]
+}

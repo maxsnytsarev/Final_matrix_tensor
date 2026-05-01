@@ -1,0 +1,62 @@
+{
+  "settings": {
+    "geometry_xyz": "as_tt_water_experiments/data/as_tt_water/water.xyz",
+    "water_coordinate_unit": "Bohr",
+    "water_as_dim": 4,
+    "water_as_sigma2": 0.1,
+    "water_as_samples": 256,
+    "cheb_interval": [
+      -0.3,
+      0.3
+    ],
+    "n_points": 7,
+    "total_tensor_points": 2401,
+    "run_mode": "single_budget",
+    "sampling_policy": "fraction",
+    "single_budget_resolved": 121,
+    "sweep_budgets_resolved": [
+      121,
+      241,
+      481,
+      961
+    ],
+    "baselines": [
+      "authors_budgeted"
+    ],
+    "my_cheb_ranks": [
+      50
+    ],
+    "my_cheb_lambda_all_list": [
+      0.1
+    ],
+    "trace_source": "fresh",
+    "trace_status": "budget_exhausted_partial_surrogate",
+    "trace_unique_queries": 121,
+    "trace_total_queries": 122
+  },
+  "rows": [
+    {
+      "mode": "single_budget",
+      "budget": 121,
+      "baseline": "authors_budgeted",
+      "status": "budget_exhausted_partial_surrogate",
+      "observed_points": 121,
+      "train_points": 121,
+      "val_points": 0,
+      "eval_points": 1000,
+      "rank_label": "1x7x12x7x1",
+      "rmse_mev": 2068099.2387435255,
+      "mae_mev": 2068098.5027458898,
+      "max_abs_error_mev": 2075655.3472756934,
+      "relative_rmse": 2361.7651620154274,
+      "mape": 6397.606362801337,
+      "train_rmse_mev": 2067221.0107172707,
+      "grid_hidden_rmse_mev": 2068099.2387435255,
+      "offgrid_rmse_mev": 2068216.7894835402,
+      "offgrid_max_abs_mev": 2074210.7326232237,
+      "elapsed_sec": 38.775166034698486,
+      "note": "Authors TT-cross evaluated under budget=121. Returned status=budget_exhausted_partial_surrogate and used 121 unique queries.",
+      "error": null
+    }
+  ]
+}
